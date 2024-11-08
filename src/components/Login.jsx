@@ -14,7 +14,7 @@ function Login({ darkMode }) {
   useEffect(() => {
     const checkSession = async () => {
       try {
-        const response = await axios.get('http://localhost:2001/dashboard', { withCredentials: true });
+        const response = await axios.get('https://backend-bookstore-9xux.onrender.com/dashboard', { withCredentials: true });
         if (response.data.loggedIn) {
           navigate('/home');
         }
@@ -29,7 +29,7 @@ function Login({ darkMode }) {
   const handleLogin = async (e) => {
     e.preventDefault(); 
     try {
-      const response = await axios.post("http://localhost:2001/login", {
+      const response = await axios.post("https://backend-bookstore-9xux.onrender.com/login", {
         username,
         password,
       }, { withCredentials: true });

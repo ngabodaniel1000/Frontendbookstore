@@ -15,7 +15,7 @@ function Signup({ darkMode }) {
    useEffect(() => {
     const checkSession = async () => {
       try {
-        const response = await axios.get('http://localhost:2001/dashboard', { withCredentials: true });
+        const response = await axios.get('https://backend-bookstore-9xux.onrender.com/dashboard', { withCredentials: true });
         if (response.data.loggedIn) {
           navigate('/home');
         }
@@ -29,7 +29,7 @@ function Signup({ darkMode }) {
   const handleSignup = async (e) => {
     e.preventDefault(); 
     try {
-      const response = await axios.post("http://localhost:2001/signup", {
+      const response = await axios.post("https://backend-bookstore-9xux.onrender.com/signup", {
         username,
         password,
         email

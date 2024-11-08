@@ -100,7 +100,7 @@ function Review({ darkmode }) {
   useEffect(() => {
     const checkSession = async () => {
       try {
-        const response = await axios.get('http://localhost:2001/dashboard', { withCredentials: true });
+        const response = await axios.get('https://backend-bookstore-9xux.onrender.com/dashboard', { withCredentials: true });
         if (!response.data.loggedIn) {
           navigate('/');
         } else {

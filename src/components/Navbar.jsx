@@ -12,7 +12,7 @@ function Navbar({ toggleDarkMode, darkmode }) {
 
   const handleLogout = async () => {
     try {
-      await axios.get('http://localhost:2001/logout', { withCredentials: true });
+      await axios.get('https://backend-bookstore-9xux.onrender.com/logout', { withCredentials: true });
       navigate('/');
     } catch (error) {
       console.error('Error logging out:', error);

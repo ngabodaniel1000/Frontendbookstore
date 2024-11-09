@@ -1,0 +1,8 @@
+staticSite:
+  name: https://frontendbookstore-uyob.onrender.com  # Replace with your app's name
+  buildCommand: npm build  # or npm run build if you use npm
+  publishPath: dist  # Ensure this matches your build directory (e.g., 'build' for Create React App)
+  redirects:
+    - source: /*
+      destination: /index.html
+      status: 200
